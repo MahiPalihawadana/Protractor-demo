@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1595268287346' stop='1595268302032'>
+    <name>register form tests</name>
+    <title>register form tests</title>
+    <test-cases>
+        <test-case start='1595268287347' status='passed' stop='1595268291620'>
+            <name>register user test valid inputs</name>
+            <title>register user test valid inputs</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1595268291620' status='passed' stop='1595268295185'>
+            <name>register user test without first name</name>
+            <title>register user test without first name</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1595268295185' status='passed' stop='1595268298636'>
+            <name>register user test without email</name>
+            <title>register user test without email</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1595268298636' status='passed' stop='1595268302029'>
+            <name>register user test with invalid email</name>
+            <title>register user test with invalid email</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

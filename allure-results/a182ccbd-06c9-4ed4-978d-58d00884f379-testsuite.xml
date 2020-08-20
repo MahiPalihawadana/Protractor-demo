@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1595483698244' stop='1595483737592'>
+    <name>login form tests</name>
+    <title>login form tests</title>
+    <test-cases>
+        <test-case start='1595483698244' status='passed' stop='1595483725674'>
+            <name>login user test valid inputs</name>
+            <title>login user test valid inputs</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1595483725674' status='passed' stop='1595483728640'>
+            <name>login user test not registered user</name>
+            <title>login user test not registered user</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1595483728640' status='passed' stop='1595483731592'>
+            <name>login user test incorrect password</name>
+            <title>login user test incorrect password</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1595483731592' status='passed' stop='1595483734616'>
+            <name>login user test incorrect email</name>
+            <title>login user test incorrect email</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1595483734616' status='passed' stop='1595483737591'>
+            <name>login user test without inputs</name>
+            <title>login user test without inputs</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

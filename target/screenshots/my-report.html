@@ -1,0 +1,297 @@
+<html><head><meta charset="utf-8"><style>body { font-family: Arial; }ul { list-style-position: inside; }li img { max-width: 100%; }span.passed { padding: 0 1em; color: green; }span.failed { padding: 0 1em; color: red; }span.pending { padding: 0 1em; color: orange; }span.stacktrace { white-space: pre; border: 1px solid rgb(0, 0, 0); font-size: 9pt; padding: 4px; background-color: rgb(204, 204, 204); }</style><script type="text/javascript">function showhide(id) {var e = document.getElementById(id);e.style.display = (e.style.display === "block") ? "none" : "block";}function buildQuickLinks() {var failedSpecs = document.querySelectorAll("li.failed");var quickLinksContainer = document.getElementById("quickLinks");if (!quickLinksContainer) return;if (failedSpecs.length > 0) { document.getElementById("quickLinksHeader").textContent = "Quicklink of Failure"}for (var i = 0; i < failedSpecs.length; ++i) {var li = document.createElement("li");var a = document.createElement("a");a.href = "#" + failedSpecs[i].id;a.textContent = failedSpecs[i].dataset.name + "  (" + failedSpecs[i].dataset.browser + ")";li.appendChild(a);quickLinksContainer.appendChild(li);}}function updatePassCount() {var totalPassed = document.querySelectorAll("li.passed").length;var totalFailed = document.querySelectorAll("li.failed").length;var totalSpecs = totalFailed + totalPassed;console.log("passed: %s, failed: %s, total: %s", totalPassed, totalFailed, totalSpecs);document.getElementById("summaryTotalSpecs").textContent = document.getElementById("summaryTotalSpecs").textContent + totalSpecs;document.getElementById("summaryTotalFailed").textContent = document.getElementById("summaryTotalFailed").textContent + totalFailed;if (totalFailed) {document.getElementById("summary").className = "failed";}}function start() {updatePassCount();buildQuickLinks();}window.onload = start;</script></head><body><h1>Report</h1><div id="summary" class="passed"><h4>Summary</h4><ul><li id="summaryTotalSpecs">Total specs tested: </li><li id="summaryTotalFailed">Total failed: </li></ul></div><ul style="list-style-type:none"><h4>COH RoUser Login (141 s)</h4><li id="02d69650-d330-11ea-85a7-8f8be4c371c9" class="failed" data-spec="spec0" data-name="valid login" data-browser="chrome"><span class="failed">&#10007;</span><a href="2677c6e37e70e5f70f1af8831c996cdc.png">valid login</a>(52 s)<ul><li>Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL. [<a href="javascript:showhide('spec0-Windows-chrome-84.0.4147.1050')">stack</a>]<br/><span style="display: none" id="spec0-Windows-chrome-84.0.4147.1050" class="stacktrace">Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)</span></li><li>Failed: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64) [<a href="javascript:showhide('spec0-Windows-chrome-84.0.4147.1051')">stack</a>]<br/><span style="display: none" id="spec0-Windows-chrome-84.0.4147.1051" class="stacktrace">ScriptTimeoutError: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64)
+    at Object.checkLegacyResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:441:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+From: Task: Protractor.waitForAngular() - Locator: By(xpath, //*[@id=&quot;content-wrapper&quot;]/div/div/div/div[2]/form/div[1]/input)
+    at Driver.schedule (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at ProtractorBrowser.executeAsyncScript_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:423:28)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:454:33
+    at ManagedPromise.invokeCallback_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7Error
+    at ElementArrayFinder.applyAction_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at LoginModule.login (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\LoginModule.js:41:19)
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:22:21)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+From: Task: Run it(&quot;valid login&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4264:13
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4172:9
+    at Timeout.&lt;anonymous&gt; (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4283:11)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:19:4)
+    at addSpecsToSuite (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)</span></li></ul></li><li id="02d6bd60-d330-11ea-85a7-8f8be4c371c9" class="failed" data-spec="spec1" data-name="invalid login Password" data-browser="chrome"><span class="failed">&#10007;</span><a href="e6178859c90bff7bba4d37489b9f48d8.png">invalid login Password</a>(18 s)<ul><li>Failed: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64) [<a href="javascript:showhide('spec1-Windows-chrome-84.0.4147.1050')">stack</a>]<br/><span style="display: none" id="spec1-Windows-chrome-84.0.4147.1050" class="stacktrace">ScriptTimeoutError: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64)
+    at Object.checkLegacyResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:441:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+From: Task: Protractor.waitForAngular() - Locator: By(xpath, //*[@id=&quot;content-wrapper&quot;]/div/div/div/div[2]/form/div[1]/input)
+    at Driver.schedule (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at ProtractorBrowser.executeAsyncScript_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:423:28)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:454:33
+    at ManagedPromise.invokeCallback_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7Error
+    at ElementArrayFinder.applyAction_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at LoginModule.login (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\LoginModule.js:41:19)
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:34:21)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+From: Task: Run it(&quot;invalid login Password&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4264:13
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4172:9
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:64:48
+    at ControlFlow.emit (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\events.js:62:21)
+    at ControlFlow.shutdown_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2674:10)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:32:2)
+    at addSpecsToSuite (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)</span></li></ul></li><li id="02d6bd61-d330-11ea-85a7-8f8be4c371c9" class="failed" data-spec="spec2" data-name="invalid login Username" data-browser="chrome"><span class="failed">&#10007;</span><a href="dcc8db9d1ff022a662147b481f52403d.png">invalid login Username</a>(18 s)<ul><li>Failed: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64) [<a href="javascript:showhide('spec2-Windows-chrome-84.0.4147.1050')">stack</a>]<br/><span style="display: none" id="spec2-Windows-chrome-84.0.4147.1050" class="stacktrace">ScriptTimeoutError: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64)
+    at Object.checkLegacyResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:441:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+From: Task: Protractor.waitForAngular() - Locator: By(xpath, //*[@id=&quot;content-wrapper&quot;]/div/div/div/div[2]/form/div[1]/input)
+    at Driver.schedule (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at ProtractorBrowser.executeAsyncScript_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:423:28)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:454:33
+    at ManagedPromise.invokeCallback_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7Error
+    at ElementArrayFinder.applyAction_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at LoginModule.login (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\LoginModule.js:41:19)
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:46:21)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+From: Task: Run it(&quot;invalid login Username&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4264:13
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4172:9
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:64:48
+    at ControlFlow.emit (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\events.js:62:21)
+    at ControlFlow.shutdown_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2674:10)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:44:2)
+    at addSpecsToSuite (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)</span></li></ul></li><li id="02d6e470-d330-11ea-85a7-8f8be4c371c9" class="failed" data-spec="spec3" data-name="empty password filed" data-browser="chrome"><span class="failed">&#10007;</span><a href="5c92776ba9f53a22c0a510badddf6ed0.png">empty password filed</a>(17 s)<ul><li>Failed: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64) [<a href="javascript:showhide('spec3-Windows-chrome-84.0.4147.1050')">stack</a>]<br/><span style="display: none" id="spec3-Windows-chrome-84.0.4147.1050" class="stacktrace">ScriptTimeoutError: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64)
+    at Object.checkLegacyResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:441:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+From: Task: Protractor.waitForAngular() - Locator: By(xpath, //*[@id=&quot;content-wrapper&quot;]/div/div/div/div[2]/form/div[1]/input)
+    at Driver.schedule (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at ProtractorBrowser.executeAsyncScript_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:423:28)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:454:33
+    at ManagedPromise.invokeCallback_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7Error
+    at ElementArrayFinder.applyAction_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at LoginModule.login (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\LoginModule.js:41:19)
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:57:21)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+From: Task: Run it(&quot;empty password filed&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4264:13
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4172:9
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:64:48
+    at ControlFlow.emit (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\events.js:62:21)
+    at ControlFlow.shutdown_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2674:10)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:55:2)
+    at addSpecsToSuite (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)</span></li></ul></li><li id="02d6e471-d330-11ea-85a7-8f8be4c371c9" class="failed" data-spec="spec4" data-name="empty username field" data-browser="chrome"><span class="failed">&#10007;</span><a href="8221f44a97a5ff3583094be527a3e64d.png">empty username field</a>(18 s)<ul><li>Failed: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64) [<a href="javascript:showhide('spec4-Windows-chrome-84.0.4147.1050')">stack</a>]<br/><span style="display: none" id="spec4-Windows-chrome-84.0.4147.1050" class="stacktrace">ScriptTimeoutError: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64)
+    at Object.checkLegacyResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:441:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+From: Task: Protractor.waitForAngular() - Locator: By(xpath, //*[@id=&quot;content-wrapper&quot;]/div/div/div/div[2]/form/div[1]/input)
+    at Driver.schedule (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at ProtractorBrowser.executeAsyncScript_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:423:28)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:454:33
+    at ManagedPromise.invokeCallback_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7Error
+    at ElementArrayFinder.applyAction_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at LoginModule.login (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\LoginModule.js:41:19)
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:68:21)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+From: Task: Run it(&quot;empty username field&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4264:13
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4172:9
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:64:48
+    at ControlFlow.emit (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\events.js:62:21)
+    at ControlFlow.shutdown_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2674:10)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:66:3)
+    at addSpecsToSuite (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)</span></li></ul></li><li id="02d6e472-d330-11ea-85a7-8f8be4c371c9" class="failed" data-spec="spec5" data-name="both empty fields" data-browser="chrome"><span class="failed">&#10007;</span><a href="ca41651eb843971f6b5d97f345d6761a.png">both empty fields</a>(18 s)<ul><li>Failed: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64) [<a href="javascript:showhide('spec5-Windows-chrome-84.0.4147.1050')">stack</a>]<br/><span style="display: none" id="spec5-Windows-chrome-84.0.4147.1050" class="stacktrace">ScriptTimeoutError: script timeout
+  (Session info: chrome=84.0.4147.105)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64)
+    at Object.checkLegacyResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:441:30
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+From: Task: Protractor.waitForAngular() - Locator: By(xpath, //*[@id=&quot;content-wrapper&quot;]/div/div/div/div[2]/form/div[1]/input)
+    at Driver.schedule (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at ProtractorBrowser.executeAsyncScript_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:423:28)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:454:33
+    at ManagedPromise.invokeCallback_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7Error
+    at ElementArrayFinder.applyAction_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.&lt;computed&gt; [as sendKeys] (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at LoginModule.login (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\LoginModule.js:41:19)
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:79:21)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+From: Task: Run it(&quot;both empty fields&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4264:13
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4172:9
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:64:48
+    at ControlFlow.emit (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\events.js:62:21)
+    at ControlFlow.shutdown_ (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2674:10)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:77:3)
+    at addSpecsToSuite (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (C:\Users\admin\Desktop\Projects\ProtractorDemo\tests\Login_specs.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)</span></li></ul></li></ul><a href="javascript:showhide('02d70b80-d330-11ea-85a7-8f8be4c371c9')">Toggle Configuration</a><div class="config" id="02d70b80-d330-11ea-85a7-8f8be4c371c9" style="display: none"><h4>Configuration</h4><li>Jasmine version:  2.8.0</li><li>Browser name:  chrome</li><li>Browser version:  84.0.4147.105</li><li>Platform:  Windows</li><li>Javascript enabled:  true</li><li>Css selectors enabled:  true</li></div></body></html>
